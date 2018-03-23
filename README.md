@@ -1,637 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<title>x9-lrn-resources</title>
-<!-- 2018-03-23 Fri 17:49 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="wintermute" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  /*]]>*/-->
-</style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
-    MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
-        displayAlign: "center",
-        displayIndent: "2em",
-
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
-             }
-        }
-    });
-/*]]>*///-->
-</script>
-</head>
-<body>
-<div id="content">
-<h1 class="title">x9-lrn-resources</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. lrn&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn">lrn</span></span></a>
-<ul>
-<li><a href="#sec-1-1">1.1. lrn-bioinformatics</a>
-<ul>
-<li><a href="#sec-1-1-1">1.1.1. </a></li>
-<li><a href="#sec-1-1-2">1.1.2. learn by doing </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-2">1.2. lrn-business</a>
-<ul>
-<li><a href="#sec-1-2-1">1.2.1. IP intellectual property</a></li>
-<li><a href="#sec-1-2-2">1.2.2. from Icon mag: in europe, of 10k food products launched every year, 50% fail within 3 months, 95% fail within 2 years</a></li>
-<li><a href="#sec-1-2-3">1.2.3. lrn-accounting</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-3">1.3. lrn-clothing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_clothing">lrn_clothing</span></span></a>
-<ul>
-<li><a href="#sec-1-3-1">1.3.1. shoes</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-4">1.4. lrn-compsci</a>
-<ul>
-<li><a href="#sec-1-4-1">1.4.1. </a></li>
-<li><a href="#sec-1-4-2">1.4.2. </a></li>
-<li><a href="#sec-1-4-3">1.4.3. </a></li>
-<li><a href="#sec-1-4-4">1.4.4. </a></li>
-<li><a href="#sec-1-4-5">1.4.5. apparently loading data from a binary instead of a plaintext is 5-20x faster?</a></li>
-<li><a href="#sec-1-4-6">1.4.6. The Big List of Naughty Strings (strings likely to cause issues as input) | Hacker News </a></li>
-<li><a href="#sec-1-4-7">1.4.7. diagramming software: lucid charts chrome app</a></li>
-<li><a href="#sec-1-4-8">1.4.8. lrn-apis</a></li>
-<li><a href="#sec-1-4-9">1.4.9. lrn-algorithms-lrn-data-structures</a></li>
-<li><a href="#sec-1-4-10">1.4.10. lrn-coding-style</a></li>
-<li><a href="#sec-1-4-11">1.4.11. lrn-compilers</a></li>
-<li><a href="#sec-1-4-12">1.4.12. lrn-cloud</a></li>
-<li><a href="#sec-1-4-13">1.4.13. lrn-crypto lrn-encryption</a></li>
-<li><a href="#sec-1-4-14">1.4.14. lrn-css-lrn-html-lrn-websites-lrn-web-programming</a></li>
-<li><a href="#sec-1-4-15">1.4.15. lrn-debugging</a></li>
-<li><a href="#sec-1-4-16">1.4.16. lrn-emacs-lrn-vim</a></li>
-<li><a href="#sec-1-4-17">1.4.17. lrn-excel</a></li>
-<li><a href="#sec-1-4-18">1.4.18. lrn-flowcharts</a></li>
-<li><a href="#sec-1-4-19">1.4.19. lrn-functional-programming</a></li>
-<li><a href="#sec-1-4-20">1.4.20. lrn-games (including finished ones I already own)</a></li>
-<li><a href="#sec-1-4-21">1.4.21. lrn-git</a></li>
-<li><a href="#sec-1-4-22">1.4.22. lrn-gpu</a></li>
-<li><a href="#sec-1-4-23">1.4.23. lrn-hardware</a></li>
-<li><a href="#sec-1-4-24">1.4.24. lrn-hdf5</a></li>
-<li><a href="#sec-1-4-25">1.4.25. lrn-image-formats</a></li>
-<li><a href="#sec-1-4-26">1.4.26. lrn-irc (lrn-irssi)</a></li>
-<li><a href="#sec-1-4-27">1.4.27. lrn-langs</a></li>
-<li><a href="#sec-1-4-28">1.4.28. lrn-linux</a></li>
-<li><a href="#sec-1-4-29">1.4.29. lrn-low-level-programming</a></li>
-<li><a href="#sec-1-4-30">1.4.30. lrn-nginx</a></li>
-<li><a href="#sec-1-4-31">1.4.31. lrn-organizational software</a></li>
-<li><a href="#sec-1-4-32">1.4.32. lrn-pandoc-lrn-markdown-lrn-plaintext-writing</a></li>
-<li><a href="#sec-1-4-33">1.4.33. lrn-privacy-lrn-security</a></li>
-<li><a href="#sec-1-4-34">1.4.34. lrn-prog-practices</a></li>
-<li><a href="#sec-1-4-35">1.4.35. lrn-regex (regular expressions)</a></li>
-<li><a href="#sec-1-4-36">1.4.36. lrn-scientific-programming</a></li>
-<li><a href="#sec-1-4-37">1.4.37. lrn-testing-lrn-unit-testing</a></li>
-<li><a href="#sec-1-4-38">1.4.38. lrn-tex-lrn-latex</a></li>
-<li><a href="#sec-1-4-39">1.4.39. lrn-wasm-lrn-webassembly</a></li>
-<li><a href="#sec-1-4-40">1.4.40. lrn-xml</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-5">1.5. lrn-cycling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_cycling">lrn_cycling</span></span></a>
-<ul>
-<li><a href="#sec-1-5-1">1.5.1. road bikes to check out</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-6">1.6. lrn-design</a>
-<ul>
-<li><a href="#sec-1-6-1">1.6.1. core principles for design could just be sufficiently complicated that it's difficult to think of good counterexamples</a></li>
-<li><a href="#sec-1-6-2">1.6.2. see kim's list of good websites</a></li>
-<li><a href="#sec-1-6-3">1.6.3. go through hack design website</a></li>
-<li><a href="#sec-1-6-4">1.6.4. crap way to improve usability </a></li>
-<li><a href="#sec-1-6-5">1.6.5. proposal for an interactive introduction to graphics programming</a></li>
-<li><a href="#sec-1-6-6">1.6.6. minimalist websites </a></li>
-<li><a href="#sec-1-6-7">1.6.7. </a></li>
-<li><a href="#sec-1-6-8">1.6.8. lrn-data-visualization</a></li>
-<li><a href="#sec-1-6-9">1.6.9. lrn-fonts</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-7">1.7. lrn-diy</a>
-<ul>
-<li><a href="#sec-1-7-1">1.7.1. lrn-book-binding</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-8">1.8. lrn-economics-lrn-finance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_economics">lrn_economics</span>&#xa0;<span class="lrn_finance">lrn_finance</span></span></a>
-<ul>
-<li><a href="#sec-1-8-1">1.8.1. lrn-computational-finance</a></li>
-<li><a href="#sec-1-8-2">1.8.2. lrn-credit</a></li>
-<li><a href="#sec-1-8-3">1.8.3. lrn-investing</a></li>
-<li><a href="#sec-1-8-4">1.8.4. lrn-personal-finance</a></li>
-<li><a href="#sec-1-8-5">1.8.5. lrn-ledger</a></li>
-<li><a href="#sec-1-8-6">1.8.6. ask salim about that as an intro book, or maybe ap econ?</a></li>
-<li><a href="#sec-1-8-7">1.8.7. revenue maybe prop to "buying power", which inv prop to rate (a la actuary guy), for which of course premium is calc from</a></li>
-<li><a href="#sec-1-8-8">1.8.8. tightwads and purchasing pain as prop to income and expenses. how to get data on what these are for most people? could match with good accuracy to address alone?</a></li>
-<li><a href="#sec-1-8-9">1.8.9. read law stuff on the shell-eni nigerian. malabu deal, in the british high court and another in arbitration?</a></li>
-<li><a href="#sec-1-8-10">1.8.10. global witness ngo, tom wayne, maybe discusses docs</a></li>
-<li><a href="#sec-1-8-11">1.8.11. </a></li>
-<li><a href="#sec-1-8-12">1.8.12. </a></li>
-<li><a href="#sec-1-8-13">1.8.13. keep read mankiw (while questioning assumptions, or at least tracking them)</a></li>
-<li><a href="#sec-1-8-14">1.8.14. </a></li>
-<li><a href="#sec-1-8-15">1.8.15. </a></li>
-<li><a href="#sec-1-8-16">1.8.16. best books to learn econ </a></li>
-<li><a href="#sec-1-8-17">1.8.17. side money</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-9">1.9. lrn-electrical-computer-engineering</a>
-<ul>
-<li><a href="#sec-1-9-1">1.9.1. (1 hr) read signals and systems section 8.7 for fm and instant freq for fun</a></li>
-<li><a href="#sec-1-9-2">1.9.2. arduino/raspberry pi</a></li>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> <head>
+</head> <body> <div id="content"> <h1 class="title">Helpful resources (and
+links) / x9-lrn-resources </h1> <div id="table-of-contents"> <h2>Table of
+Contents</h2> <div id="text-table-of-contents"> <ul> <li><a href="#sec-1">1.
+lrn&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn">lrn</span></span></a>
+<ul> <li><a href="#sec-1-1">1.1. lrn-bioinformatics</a> <ul> <li><a
+href="#sec-1-1-1">1.1.1. </a></li> <li><a href="#sec-1-1-2">1.1.2. learn by
+doing </a></li> </ul> </li> <li><a href="#sec-1-2">1.2. lrn-business</a> <ul>
+<li><a href="#sec-1-2-1">1.2.1. IP intellectual property</a></li> <li><a
+href="#sec-1-2-2">1.2.2. from Icon mag: in europe, of 10k food products
+launched every year, 50% fail within 3 months, 95% fail within 2 years</a></li>
+<li><a href="#sec-1-2-3">1.2.3. lrn-accounting</a></li> </ul> </li> <li><a
+href="#sec-1-3">1.3. lrn-clothing&#xa0;&#xa0;&#xa0;<span class="tag"><span
+class="lrn_clothing">lrn_clothing</span></span></a> <ul> <li><a
+href="#sec-1-3-1">1.3.1. shoes</a></li> </ul> </li> <li><a href="#sec-1-4">1.4.
+lrn-compsci</a> <ul> <li><a href="#sec-1-4-1">1.4.1. </a></li> <li><a
+href="#sec-1-4-2">1.4.2. </a></li> <li><a href="#sec-1-4-3">1.4.3. </a></li>
+<li><a href="#sec-1-4-4">1.4.4. </a></li> <li><a href="#sec-1-4-5">1.4.5.
+apparently loading data from a binary instead of a plaintext is 5-20x
+faster?</a></li> <li><a href="#sec-1-4-6">1.4.6. The Big List of Naughty
+Strings (strings likely to cause issues as input) | Hacker News </a></li>
+<li><a href="#sec-1-4-7">1.4.7. diagramming software: lucid charts chrome
+app</a></li> <li><a href="#sec-1-4-8">1.4.8. lrn-apis</a></li> <li><a
+href="#sec-1-4-9">1.4.9. lrn-algorithms-lrn-data-structures</a></li> <li><a
+href="#sec-1-4-10">1.4.10. lrn-coding-style</a></li> <li><a
+href="#sec-1-4-11">1.4.11. lrn-compilers</a></li> <li><a
+href="#sec-1-4-12">1.4.12. lrn-cloud</a></li> <li><a href="#sec-1-4-13">1.4.13.
+lrn-crypto lrn-encryption</a></li> <li><a href="#sec-1-4-14">1.4.14.
+lrn-css-lrn-html-lrn-websites-lrn-web-programming</a></li> <li><a
+href="#sec-1-4-15">1.4.15. lrn-debugging</a></li> <li><a
+href="#sec-1-4-16">1.4.16. lrn-emacs-lrn-vim</a></li> <li><a
+href="#sec-1-4-17">1.4.17. lrn-excel</a></li> <li><a href="#sec-1-4-18">1.4.18.
+lrn-flowcharts</a></li> <li><a href="#sec-1-4-19">1.4.19.
+lrn-functional-programming</a></li> <li><a href="#sec-1-4-20">1.4.20. lrn-games
+(including finished ones I already own)</a></li> <li><a
+href="#sec-1-4-21">1.4.21. lrn-git</a></li> <li><a href="#sec-1-4-22">1.4.22.
+lrn-gpu</a></li> <li><a href="#sec-1-4-23">1.4.23. lrn-hardware</a></li> <li><a
+href="#sec-1-4-24">1.4.24. lrn-hdf5</a></li> <li><a href="#sec-1-4-25">1.4.25.
+lrn-image-formats</a></li> <li><a href="#sec-1-4-26">1.4.26. lrn-irc
+(lrn-irssi)</a></li> <li><a href="#sec-1-4-27">1.4.27. lrn-langs</a></li>
+<li><a href="#sec-1-4-28">1.4.28. lrn-linux</a></li> <li><a
+href="#sec-1-4-29">1.4.29. lrn-low-level-programming</a></li> <li><a
+href="#sec-1-4-30">1.4.30. lrn-nginx</a></li> <li><a href="#sec-1-4-31">1.4.31.
+lrn-organizational software</a></li> <li><a href="#sec-1-4-32">1.4.32.
+lrn-pandoc-lrn-markdown-lrn-plaintext-writing</a></li> <li><a
+href="#sec-1-4-33">1.4.33. lrn-privacy-lrn-security</a></li> <li><a
+href="#sec-1-4-34">1.4.34. lrn-prog-practices</a></li> <li><a
+href="#sec-1-4-35">1.4.35. lrn-regex (regular expressions)</a></li> <li><a
+href="#sec-1-4-36">1.4.36. lrn-scientific-programming</a></li> <li><a
+href="#sec-1-4-37">1.4.37. lrn-testing-lrn-unit-testing</a></li> <li><a
+href="#sec-1-4-38">1.4.38. lrn-tex-lrn-latex</a></li> <li><a
+href="#sec-1-4-39">1.4.39. lrn-wasm-lrn-webassembly</a></li> <li><a
+href="#sec-1-4-40">1.4.40. lrn-xml</a></li> </ul> </li> <li><a
+href="#sec-1-5">1.5. lrn-cycling&#xa0;&#xa0;&#xa0;<span class="tag"><span
+class="lrn_cycling">lrn_cycling</span></span></a> <ul> <li><a
+href="#sec-1-5-1">1.5.1. road bikes to check out</a></li> </ul> </li> <li><a
+href="#sec-1-6">1.6. lrn-design</a> <ul> <li><a href="#sec-1-6-1">1.6.1. core
+principles for design could just be sufficiently complicated that it's
+difficult to think of good counterexamples</a></li> <li><a
+href="#sec-1-6-2">1.6.2. see kim's list of good websites</a></li> <li><a
+href="#sec-1-6-3">1.6.3. go through hack design website</a></li> <li><a
+href="#sec-1-6-4">1.6.4. crap way to improve usability </a></li> <li><a
+href="#sec-1-6-5">1.6.5. proposal for an interactive introduction to graphics
+programming</a></li> <li><a href="#sec-1-6-6">1.6.6. minimalist websites
+</a></li> <li><a href="#sec-1-6-7">1.6.7. </a></li> <li><a
+href="#sec-1-6-8">1.6.8. lrn-data-visualization</a></li> <li><a
+href="#sec-1-6-9">1.6.9. lrn-fonts</a></li> </ul> </li> <li><a
+href="#sec-1-7">1.7. lrn-diy</a> <ul> <li><a href="#sec-1-7-1">1.7.1.
+lrn-book-binding</a></li> </ul> </li> <li><a href="#sec-1-8">1.8.
+lrn-economics-lrn-finance&#xa0;&#xa0;&#xa0;<span class="tag"><span
+class="lrn_economics">lrn_economics</span>&#xa0;<span
+class="lrn_finance">lrn_finance</span></span></a> <ul> <li><a
+href="#sec-1-8-1">1.8.1. lrn-computational-finance</a></li> <li><a
+href="#sec-1-8-2">1.8.2. lrn-credit</a></li> <li><a href="#sec-1-8-3">1.8.3.
+lrn-investing</a></li> <li><a href="#sec-1-8-4">1.8.4.
+lrn-personal-finance</a></li> <li><a href="#sec-1-8-5">1.8.5.
+lrn-ledger</a></li> <li><a href="#sec-1-8-6">1.8.6. ask salim about that as an
+intro book, or maybe ap econ?</a></li> <li><a href="#sec-1-8-7">1.8.7. revenue
+maybe prop to "buying power", which inv prop to rate (a la actuary guy), for
+which of course premium is calc from</a></li> <li><a href="#sec-1-8-8">1.8.8.
+tightwads and purchasing pain as prop to income and expenses. how to get data
+on what these are for most people? could match with good accuracy to address
+alone?</a></li> <li><a href="#sec-1-8-9">1.8.9. read law stuff on the shell-eni
+nigerian. malabu deal, in the british high court and another in
+arbitration?</a></li> <li><a href="#sec-1-8-10">1.8.10. global witness ngo, tom
+wayne, maybe discusses docs</a></li> <li><a href="#sec-1-8-11">1.8.11.
+</a></li> <li><a href="#sec-1-8-12">1.8.12. </a></li> <li><a
+href="#sec-1-8-13">1.8.13. keep read mankiw (while questioning assumptions, or
+at least tracking them)</a></li> <li><a href="#sec-1-8-14">1.8.14. </a></li>
+<li><a href="#sec-1-8-15">1.8.15. </a></li> <li><a href="#sec-1-8-16">1.8.16.
+best books to learn econ </a></li> <li><a href="#sec-1-8-17">1.8.17. side
+money</a></li> </ul> </li> <li><a href="#sec-1-9">1.9.
+lrn-electrical-computer-engineering</a> <ul> <li><a href="#sec-1-9-1">1.9.1. (1
+hr) read signals and systems section 8.7 for fm and instant freq for
+fun</a></li> <li><a href="#sec-1-9-2">1.9.2. arduino/raspberry pi</a></li>
 <li><a href="#sec-1-9-3">1.9.3. lrn-signal-processing (lrn-sig-proc)</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-10">1.10. lrn-Food-drink</a>
-<ul>
-<li><a href="#sec-1-10-1">1.10.1. lrn-healthy-eating (eating comes before exercise in importance!)</a></li>
-<li><a href="#sec-1-10-2">1.10.2. class notes</a></li>
-<li><a href="#sec-1-10-3">1.10.3. Get good at drinking!</a></li>
-<li><a href="#sec-1-10-4">1.10.4. get good at cooking!</a></li>
-<li><a href="#sec-1-10-5">1.10.5. coffee and tea</a></li>
-<li><a href="#sec-1-10-6">1.10.6. already made cooking recipes that are good</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-11">1.11. lrn-grooming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_grooming">lrn_grooming</span></span></a>
-<ul>
-<li><a href="#sec-1-11-1">1.11.1. lrn-hair&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_hair">lrn_hair</span></span></a></li>
-</ul>
-</li>
-<li><a href="#sec-1-12">1.12. lrn-ergonomics</a>
-<ul>
-<li><a href="#sec-1-12-1">1.12.1. ergonomic chair stuff </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-13">1.13. lrn-hardware</a>
-<ul>
-<li><a href="#sec-1-13-1">1.13.1. sony WH-1000xM2 noise-canceling headphones</a></li>
-<li><a href="#sec-1-13-2">1.13.2. lrn-knots</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-14">1.14. lrn-history</a>
-<ul>
-<li><a href="#sec-1-14-1">1.14.1. lrn-chinese-history</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-15">1.15. lrn-home-accoutrements</a>
-<ul>
-<li><a href="#sec-1-15-1">1.15.1. digitizing paper records from home </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-16">1.16. lrn-languages</a>
-<ul>
-<li><a href="#sec-1-16-1">1.16.1. dod's learning resources </a></li>
-<li><a href="#sec-1-16-2">1.16.2. Katrina says  Pimsleur language learning courses are great</a></li>
-<li><a href="#sec-1-16-3">1.16.3. lrn-french</a></li>
-<li><a href="#sec-1-16-4">1.16.4. lrn-mandarin-chinese</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-17">1.17. lrn-math</a>
-<ul>
-<li><a href="#sec-1-17-1">1.17.1. </a></li>
-<li><a href="#sec-1-17-2">1.17.2. </a></li>
-<li><a href="#sec-1-17-3">1.17.3. </a></li>
-<li><a href="#sec-1-17-4">1.17.4. </a></li>
-<li><a href="#sec-1-17-5">1.17.5. visualization of math for pedagogy</a></li>
-<li><a href="#sec-1-17-6">1.17.6. Ten lessons I wish I had learned before teaching differential equations" [pdf] </a></li>
-<li><a href="#sec-1-17-7">1.17.7. peak finding </a></li>
-<li><a href="#sec-1-17-8">1.17.8. lrn-calculus</a></li>
-<li><a href="#sec-1-17-9">1.17.9. lrn-bond-graphs</a></li>
-<li><a href="#sec-1-17-10">1.17.10. lrn-category-theory</a></li>
-<li><a href="#sec-1-17-11">1.17.11. lrn-gradient-descent</a></li>
-<li><a href="#sec-1-17-12">1.17.12. lrn-information-theory</a></li>
-<li><a href="#sec-1-17-13">1.17.13. lrn-lin-alg</a></li>
-<li><a href="#sec-1-17-14">1.17.14. lrn-network-graphs</a></li>
-<li><a href="#sec-1-17-15">1.17.15. lrn-statistics-lrn-stats</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-18">1.18. lrn-nanoscience-lrn-nanotech</a>
-<ul>
-<li><a href="#sec-1-18-1">1.18.1. Nanodoc software</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-19">1.19. lrn-neural-networks</a>
-<ul>
-<li><a href="#sec-1-19-1">1.19.1. </a></li>
-<li><a href="#sec-1-19-2">1.19.2. </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-20">1.20. lrn-NS lrn-neuroscience</a>
-<ul>
-<li><a href="#sec-1-20-1">1.20.1. what is known about coding in neurons? prob have to get into specific region</a></li>
-<li><a href="#sec-1-20-2">1.20.2. maybe classify different ways of transfering information between them?</a></li>
-<li><a href="#sec-1-20-3">1.20.3. sawtooth beta?????? wtf is up with these waveforms</a></li>
-<li><a href="#sec-1-20-4">1.20.4. if learn stuff about thal, can maybe help with parkinson's?</a></li>
-<li><a href="#sec-1-20-5">1.20.5. rlnshp b/w D1 DA rec b/w epi &amp; park's</a></li>
-<li><a href="#sec-1-20-6">1.20.6. inactivation variables</a></li>
-<li><a href="#sec-1-20-7">1.20.7. lrn-fmri</a></li>
-<li><a href="#sec-1-20-8">1.20.8. lrn-iit</a></li>
-<li><a href="#sec-1-20-9">1.20.9. lrn-holonomic-brain-theory</a></li>
-<li><a href="#sec-1-20-10">1.20.10. lrn-neuro-anatomy (lrn-anatomy) lrn-neuroanatomy</a></li>
-<li><a href="#sec-1-20-11">1.20.11. lrn-neuro-methods</a></li>
-<li><a href="#sec-1-20-12">1.20.12. lrn-neuro-rhythms</a></li>
-<li><a href="#sec-1-20-13">1.20.13. lrn-nootropics</a></li>
-<li><a href="#sec-1-20-14">1.20.14. lrn-compu-ns</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-21">1.21. lrn-philosophy</a>
-<ul>
-<li><a href="#sec-1-21-1">1.21.1. lrn-logic</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-22">1.22. lrn-physics</a>
-<ul>
-<li><a href="#sec-1-22-1">1.22.1. accumulate ?</a></li>
-<li><a href="#sec-1-22-2">1.22.2. go back over krane's intro (nick james has krane)</a></li>
-<li><a href="#sec-1-22-3">1.22.3. study general relativity, like einstein's book?</a></li>
-<li><a href="#sec-1-22-4">1.22.4. Could warp across space-time by generating points of huge gravity, from either huge masses or masses from energy?</a></li>
-<li><a href="#sec-1-22-5">1.22.5. books (look at this e-library) </a></li>
-<li><a href="#sec-1-22-6">1.22.6. why momentum works </a></li>
-<li><a href="#sec-1-22-7">1.22.7. </a></li>
-<li><a href="#sec-1-22-8">1.22.8. </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-23">1.23. lrn-politics</a>
-<ul>
-<li><a href="#sec-1-23-1">1.23.1. find news source for local political news, pay attn to local politics</a></li>
-<li><a href="#sec-1-23-2">1.23.2. go over thinktanks </a></li>
-<li><a href="#sec-1-23-3">1.23.3. use findthedata.org</a></li>
-<li><a href="#sec-1-23-4">1.23.4. also check out google's publicdata thing?</a></li>
-<li><a href="#sec-1-23-5">1.23.5. read less wrong, maybe take notes on essays? do the starter sequence</a></li>
-<li><a href="#sec-1-23-6">1.23.6. look anti nuclear stuff to see what they say point by point</a></li>
-<li><a href="#sec-1-23-7">1.23.7. add to um to listen? podcasts </a></li>
-<li><a href="#sec-1-23-8">1.23.8. open-politics, a la open political data </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-24">1.24. lrn-productivity</a>
-<ul>
-<li><a href="#sec-1-24-1">1.24.1. wtf mdwiki allows wikis on github pages sites???</a></li>
-<li><a href="#sec-1-24-2">1.24.2. lrn-procrastination</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-25">1.25. lrn-prof-dev-lrn-professional-development</a>
-<ul>
-<li><a href="#sec-1-25-1">1.25.1. 20130326 professional devlpmt talk</a></li>
-<li><a href="#sec-1-25-2">1.25.2. lrn-leadership</a></li>
-<li><a href="#sec-1-25-3">1.25.3. lrn-networking lrn-professional-networking / long-term-networking</a></li>
-<li><a href="#sec-1-25-4">1.25.4. lrn-presn, lrn-presentations</a></li>
-<li><a href="#sec-1-25-5">1.25.5. lrn-industry</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-26">1.26. lrn-ripping</a>
-<ul>
-<li><a href="#sec-1-26-1">1.26.1. DVDs</a></li>
-<li><a href="#sec-1-26-2">1.26.2. CDs</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-27">1.27. lrn-sailing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_sailing">lrn_sailing</span></span></a>
-<ul>
-<li><a href="#sec-1-27-1">1.27.1. sailing notes, day 1 2014-09-20</a></li>
-<li><a href="#sec-1-27-2">1.27.2. sailing notes, day 2 2014-09-21</a></li>
-<li><a href="#sec-1-27-3">1.27.3. sailing notes, day 3 2014-09-27</a></li>
-<li><a href="#sec-1-27-4">1.27.4. sailing notes, day 4 2014-09-28</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-28">1.28. lrn-science-curation</a>
-<ul>
-<li><a href="#sec-1-28-1">1.28.1. researchgate and </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-29">1.29. lrn-science-policy</a>
-<ul>
-<li><a href="#sec-1-29-1">1.29.1. criticism of peer review</a></li>
-<li><a href="#sec-1-29-2">1.29.2. reproducibility crisis</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-30">1.30. lrn-sociology</a></li>
-<li><a href="#sec-1-31">1.31. lrn-social-movements</a>
-<ul>
-<li><a href="#sec-1-31-1">1.31.1. lrn-activism</a></li>
-<li><a href="#sec-1-31-2">1.31.2. lrn-effective-altruism EA</a></li>
-<li><a href="#sec-1-31-3">1.31.3. lrn-feminism</a></li>
-<li><a href="#sec-1-31-4">1.31.4. lrn-labor-rights</a></li>
-<li><a href="#sec-1-31-5">1.31.5. lrn-lrning</a></li>
-<li><a href="#sec-1-31-6">1.31.6. lrn-quantified-self</a></li>
-<li><a href="#sec-1-31-7">1.31.7. lrn-transhumanism</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-32">1.32. lrn-studying lrn-reading</a>
-<ul>
-<li><a href="#sec-1-32-1">1.32.1. PQRST system - Preview, Question, Read, Summary, Test</a></li>
-<li><a href="#sec-1-32-2">1.32.2. Studying for Science, in calibre</a></li>
-<li><a href="#sec-1-32-3">1.32.3. </a></li>
-<li><a href="#sec-1-32-4">1.32.4. how to read a book</a></li>
-<li><a href="#sec-1-32-5">1.32.5. lrn-trackers</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-33">1.33. lrn-symbolic-logic</a>
-<ul>
-<li><a href="#sec-1-33-1">1.33.1. learn symbolic regression</a></li>
-<li><a href="#sec-1-33-2">1.33.2. jason's idea to optimize models based on fundamental laws of physical systems derived from symbolic logic,</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-34">1.34. lrn-teaching</a>
-<ul>
-<li><a href="#sec-1-34-1">1.34.1. avery's first-year grad school teacher starts class with an open ended question, and connects people's answers in a web through discussion, and then saves and posts to the web</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-35">1.35. lrn-traveling</a>
-<ul>
-<li><a href="#sec-1-35-1">1.35.1. eventually should learn air deals via </a></li>
-<li><a href="#sec-1-35-2">1.35.2. can track trends via </a></li>
-</ul>
-</li>
-<li><a href="#sec-1-36">1.36. lrn-writing</a>
-<ul>
-<li><a href="#sec-1-36-1">1.36.1. </a></li>
-<li><a href="#sec-1-36-2">1.36.2. brian nosek says In writing, lead with the evidence, follow with the explanation.</a></li>
-<li><a href="#sec-1-36-3">1.36.3. writing essay to eric denovellis after briefly reading chapters of his thesis:</a></li>
-<li><a href="#sec-1-36-4">1.36.4. A manual for writers Kate l turabian</a></li>
-<li><a href="#sec-1-36-5">1.36.5. lrn-writing-systems/software! currently using pandoc</a></li>
-<li><a href="#sec-1-36-6">1.36.6. lrn-sci-writing</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> lrn&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn">lrn</span></span></h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> lrn-bioinformatics</h3>
-<div class="outline-text-3" id="text-1-1">
-</div><div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> <a href="http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics/">http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics/</a></h4>
-</div>
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> learn by doing <a href="http://rosalind.info/problems/list-view/">http://rosalind.info/problems/list-view/</a></h4>
-</div>
-</div>
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> lrn-business</h3>
-<div class="outline-text-3" id="text-1-2">
-</div><div id="outline-container-sec-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> IP intellectual property</h4>
-<div class="outline-text-4" id="text-1-2-1">
-</div><ol class="org-ol"><li><a id="sec-1-2-1-1" name="sec-1-2-1-1"></a><a href="http://adlervermillion.com/how-to-read-a-patent/">http://adlervermillion.com/how-to-read-a-patent/</a><br  /></li></ol>
-</div>
-<div id="outline-container-sec-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> from Icon mag: in europe, of 10k food products launched every year, 50% fail within 3 months, 95% fail within 2 years</h4>
-</div>
-<div id="outline-container-sec-1-2-3" class="outline-4">
-<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> lrn-accounting</h4>
-<div class="outline-text-4" id="text-1-2-3">
-</div><ol class="org-ol"><li><a id="sec-1-2-3-1" name="sec-1-2-3-1"></a>book Accounting for Programmers<br  /></li>
-<li><a id="sec-1-2-3-2" name="sec-1-2-3-2"></a><a href="http://www.learnaccountingforfree.com/">http://www.learnaccountingforfree.com/</a><br  /></li>
-<li><a id="sec-1-2-3-3" name="sec-1-2-3-3"></a><a href="http://www.dwmbeancounter.com/tutorial/Tutorial.html">http://www.dwmbeancounter.com/tutorial/Tutorial.html</a> <a href="http://hn.premii.com/#/comments/11239437">http://hn.premii.com/#/comments/11239437</a><br  /></li></ol>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3"><span class="section-number-3">1.3</span> lrn-clothing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="lrn_clothing">lrn_clothing</span></span></h3>
-<div class="outline-text-3" id="text-1-3">
-</div><div id="outline-container-sec-1-3-1" class="outline-4">
-<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> shoes</h4>
-<div class="outline-text-4" id="text-1-3-1">
-</div><ol class="org-ol"><li><a id="sec-1-3-1-1" name="sec-1-3-1-1"></a>Hubero's shoe oil / grease<br  /></li>
-<li><a id="sec-1-3-1-2" name="sec-1-3-1-2"></a>waterproofing canvas converse, apparently use fluoropolymer only, not silicon <a href="http://www.ehow.com/how_8383551_waterproof-converse.html">http://www.ehow.com/how_8383551_waterproof-converse.html</a><br  /></li>
-<li><a id="sec-1-3-1-3" name="sec-1-3-1-3"></a>ethical shoes<br  /><ol class="org-ol"><li><a id="sec-1-3-1-3-1" name="sec-1-3-1-3-1"></a><a href="https://www.zshoesorganic.com/collections/mens/products/mens-blackout-edition-1?variant=42581730120">https://www.zshoesorganic.com/collections/mens/products/mens-blackout-edition-1?variant=42581730120</a><br  /></li>
-<li><a id="sec-1-3-1-3-2" name="sec-1-3-1-3-2"></a><a href="https://www.etnies.com/us/mens/shoes/jameson-ht-4101000468.html?dwvar_4101000468_color=979#start=6">https://www.etnies.com/us/mens/shoes/jameson-ht-4101000468.html?dwvar_4101000468_color=979#start=6</a><br  /></li>
-<li><a id="sec-1-3-1-3-3" name="sec-1-3-1-3-3"></a>vegan ? unclear <a href="https://keepcompany.com/products/the-homer-black-non-slip">https://keepcompany.com/products/the-homer-black-non-slip</a><br  /><ol class="org-ol"><li><a id="sec-1-3-1-3-3-1" name="sec-1-3-1-3-3-1"></a>even if not everything they sell is vegan, they do a LOT of things with musicians to donate to social causes like PP, ACLU, etc.<br  /></li></ol>
-</li>
-<li><a id="sec-1-3-1-3-4" name="sec-1-3-1-3-4"></a><a href="https://shop.ethletic.com/en/trainer/">https://shop.ethletic.com/en/trainer/</a><br  /></li>
-<li><a id="sec-1-3-1-3-5" name="sec-1-3-1-3-5"></a>the people's movement<br  /></li>
-<li><a id="sec-1-3-1-3-6" name="sec-1-3-1-3-6"></a>veja<br  /></li>
-<li><a id="sec-1-3-1-3-7" name="sec-1-3-1-3-7"></a>indosole<br  /></li>
-<li><a id="sec-1-3-1-3-8" name="sec-1-3-1-3-8"></a>fancy dress "vegan leather" shoes <a href="https://www.noah-shop.com/en/vegan-mens-shoes/">https://www.noah-shop.com/en/vegan-mens-shoes/</a><br  /></li>
-<li><a id="sec-1-3-1-3-9" name="sec-1-3-1-3-9"></a>exercise <a href="https://www.etnies.com/us/mens/shoes/scout-4101000419.html?dwvar_4101000419_color=008#start=37">https://www.etnies.com/us/mens/shoes/scout-4101000419.html?dwvar_4101000419_color=008#start=37</a><br  /></li>
-<li><a id="sec-1-3-1-3-10" name="sec-1-3-1-3-10"></a>brooks shoe company makes most shoes vegan? spec in running shoes <a href="http://www.brooksrunning.com/en_us">http://www.brooksrunning.com/en_us</a><br  /></li></ol>
-</li></ol>
-</div>
-</div>
-<div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4"><span class="section-number-3">1.4</span> lrn-compsci</h3>
-<div class="outline-text-3" id="text-1-4">
-</div><div id="outline-container-sec-1-4-1" class="outline-4">
-<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> <a href="https://www.reddit.com/r/programming/comments/6dd7lg/every_5_minutes_you_spend_writing_code_in_a_new/">https://www.reddit.com/r/programming/comments/6dd7lg/every_5_minutes_you_spend_writing_code_in_a_new/</a></h4>
-</div>
-<div id="outline-container-sec-1-4-2" class="outline-4">
-<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> <a href="https://github.com/Leo-G/DevopsWiki">https://github.com/Leo-G/DevopsWiki</a></h4>
-</div>
-<div id="outline-container-sec-1-4-3" class="outline-4">
-<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> <a href="https://teachyourselfcs.com/">https://teachyourselfcs.com/</a></h4>
-</div>
-<div id="outline-container-sec-1-4-4" class="outline-4">
-<h4 id="sec-1-4-4"><span class="section-number-4">1.4.4</span> <a href="http://composingprograms.com/">http://composingprograms.com/</a></h4>
-</div>
-<div id="outline-container-sec-1-4-5" class="outline-4">
-<h4 id="sec-1-4-5"><span class="section-number-4">1.4.5</span> apparently loading data from a binary instead of a plaintext is 5-20x faster?</h4>
-</div>
-<div id="outline-container-sec-1-4-6" class="outline-4">
-<h4 id="sec-1-4-6"><span class="section-number-4">1.4.6</span> The Big List of Naughty Strings (strings likely to cause issues as input) | Hacker News <a href="https://news.ycombinator.com/item?id=13406119">https://news.ycombinator.com/item?id=13406119</a></h4>
-</div>
-<div id="outline-container-sec-1-4-7" class="outline-4">
-<h4 id="sec-1-4-7"><span class="section-number-4">1.4.7</span> diagramming software: lucid charts chrome app</h4>
-</div>
-<div id="outline-container-sec-1-4-8" class="outline-4">
-<h4 id="sec-1-4-8"><span class="section-number-4">1.4.8</span> lrn-apis</h4>
-<div class="outline-text-4" id="text-1-4-8">
-</div><ol class="org-ol"><li><a id="sec-1-4-8-1" name="sec-1-4-8-1"></a><a href="https://news.ycombinator.com/item?id=8636758">https://news.ycombinator.com/item?id=8636758</a><br  /></li>
-<li><a id="sec-1-4-8-2" name="sec-1-4-8-2"></a>cheatsheets for everything <a href="http://overapi.com/">http://overapi.com/</a><br  /></li></ol>
-</div>
-<div id="outline-container-sec-1-4-9" class="outline-4">
-<h4 id="sec-1-4-9"><span class="section-number-4">1.4.9</span> lrn-algorithms-lrn-data-structures</h4>
-<div class="outline-text-4" id="text-1-4-9">
-</div><ol class="org-ol"><li><a id="sec-1-4-9-1" name="sec-1-4-9-1"></a>visualizing algos: <a href="https://news.ycombinator.com/item?id=7949995">https://news.ycombinator.com/item?id=7949995</a><br  /></li>
-<li><a id="sec-1-4-9-2" name="sec-1-4-9-2"></a>data compression explained <a href="http://mattmahoney.net/dc/dce.html">http://mattmahoney.net/dc/dce.html</a><br  /></li>
-<li><a id="sec-1-4-9-3" name="sec-1-4-9-3"></a>big data<br  /><ol class="org-ol"><li><a id="sec-1-4-9-3-1" name="sec-1-4-9-3-1"></a><a href="https://ldtopology.wordpress.com/category/data-topology/">https://ldtopology.wordpress.com/category/data-topology/</a><br  /></li></ol>
-</li>
-<li><a id="sec-1-4-9-4" name="sec-1-4-9-4"></a>dictionary of algos and data structures <a href="http://xlinux.nist.gov/dads/">http://xlinux.nist.gov/dads/</a><br  /></li>
-<li><a id="sec-1-4-9-5" name="sec-1-4-9-5"></a>algos used in the linux kernel <a href="http://cstheory.stackexchange.com/a/19773">http://cstheory.stackexchange.com/a/19773</a><br  /></li></ol>
-</div>
-<div id="outline-container-sec-1-4-10" class="outline-4">
-<h4 id="sec-1-4-10"><span class="section-number-4">1.4.10</span> lrn-coding-style</h4>
-<div class="outline-text-4" id="text-1-4-10">
-</div><ol class="org-ol"><li><a id="sec-1-4-10-1" name="sec-1-4-10-1"></a>uni west FL style guide <a href="http://www.cs.uwf.edu/~wilde/gump/codestan.htm">http://www.cs.uwf.edu/~wilde/gump/codestan.htm</a><br  /></li></ol>
-</div>
-<div id="outline-container-sec-1-4-11" class="outline-4">
-<h4 id="sec-1-4-11"><span class="section-number-4">1.4.11</span> lrn-compilers</h4>
-<div class="outline-text-4" id="text-1-4-11">
-</div><ol class="org-ol"><li><a id="sec-1-4-11-1" name="sec-1-4-11-1"></a>Compiler takes the source files and outputs object files, Linker takes the object files and creates an executable<br  /></li>
-<li><a id="sec-1-4-11-2" name="sec-1-4-11-2"></a>installing GCC from scratch <a href="http://stackoverflow.com/a/9450422">http://stackoverflow.com/a/9450422</a>, though the next answer <a href="http://stackoverflow.com/a/10662297">http://stackoverflow.com/a/10662297</a> claims a much easier solution that IIRC worked on my centos office machine<br  /><div class="outline-text-5" id="text-1-4-11-2">
-<p>
-```
-tar xzf gcc-4.6.2.tar.gz
-cd gcc-4.6.2
-./contrib/download<sub>prerequisites</sub>
-cd ..
-mkdir objdir
-cd objdir
-$PWD/../gcc-4.6.2/configure &#x2013;prefix=/opt/gcc-4.6.2
-make
-make install
-```
-</p>
-</div>
-</li>
+</ul> </li> <li><a href="#sec-1-10">1.10. lrn-Food-drink</a> <ul> <li><a
+href="#sec-1-10-1">1.10.1. lrn-healthy-eating (eating comes before exercise in
+importance!)</a></li> <li><a href="#sec-1-10-2">1.10.2. class notes</a></li>
+<li><a href="#sec-1-10-3">1.10.3. Get good at drinking!</a></li> <li><a
+href="#sec-1-10-4">1.10.4. get good at cooking!</a></li> <li><a
+href="#sec-1-10-5">1.10.5. coffee and tea</a></li> <li><a
+href="#sec-1-10-6">1.10.6. already made cooking recipes that are good</a></li>
+</ul> </li> <li><a href="#sec-1-11">1.11. lrn-grooming&#xa0;&#xa0;&#xa0;<span
+class="tag"><span class="lrn_grooming">lrn_grooming</span></span></a> <ul>
+<li><a href="#sec-1-11-1">1.11.1. lrn-hair&#xa0;&#xa0;&#xa0;<span
+class="tag"><span class="lrn_hair">lrn_hair</span></span></a></li> </ul> </li>
+<li><a href="#sec-1-12">1.12. lrn-ergonomics</a> <ul> <li><a
+href="#sec-1-12-1">1.12.1. ergonomic chair stuff </a></li> </ul> </li> <li><a
+href="#sec-1-13">1.13. lrn-hardware</a> <ul> <li><a href="#sec-1-13-1">1.13.1.
+sony WH-1000xM2 noise-canceling headphones</a></li> <li><a
+href="#sec-1-13-2">1.13.2. lrn-knots</a></li> </ul> </li> <li><a
+href="#sec-1-14">1.14. lrn-history</a> <ul> <li><a href="#sec-1-14-1">1.14.1.
+lrn-chinese-history</a></li> </ul> </li> <li><a href="#sec-1-15">1.15.
+lrn-home-accoutrements</a> <ul> <li><a href="#sec-1-15-1">1.15.1. digitizing
+paper records from home </a></li> </ul> </li> <li><a href="#sec-1-16">1.16.
+lrn-languages</a> <ul> <li><a href="#sec-1-16-1">1.16.1. dod's learning
+resources </a></li> <li><a href="#sec-1-16-2">1.16.2. Katrina says  Pimsleur
+language learning courses are great</a></li> <li><a href="#sec-1-16-3">1.16.3.
+lrn-french</a></li> <li><a href="#sec-1-16-4">1.16.4.
+lrn-mandarin-chinese</a></li> </ul> </li> <li><a href="#sec-1-17">1.17.
+lrn-math</a> <ul> <li><a href="#sec-1-17-1">1.17.1. </a></li> <li><a
+href="#sec-1-17-2">1.17.2. </a></li> <li><a href="#sec-1-17-3">1.17.3.
+</a></li> <li><a href="#sec-1-17-4">1.17.4. </a></li> <li><a
+href="#sec-1-17-5">1.17.5. visualization of math for pedagogy</a></li> <li><a
+href="#sec-1-17-6">1.17.6. Ten lessons I wish I had learned before teaching
+differential equations" [pdf] </a></li> <li><a href="#sec-1-17-7">1.17.7. peak
+finding </a></li> <li><a href="#sec-1-17-8">1.17.8. lrn-calculus</a></li>
+<li><a href="#sec-1-17-9">1.17.9. lrn-bond-graphs</a></li> <li><a
+href="#sec-1-17-10">1.17.10. lrn-category-theory</a></li> <li><a
+href="#sec-1-17-11">1.17.11. lrn-gradient-descent</a></li> <li><a
+href="#sec-1-17-12">1.17.12. lrn-information-theory</a></li> <li><a
+href="#sec-1-17-13">1.17.13. lrn-lin-alg</a></li> <li><a
+href="#sec-1-17-14">1.17.14. lrn-network-graphs</a></li> <li><a
+href="#sec-1-17-15">1.17.15. lrn-statistics-lrn-stats</a></li> </ul> </li>
+<li><a href="#sec-1-18">1.18. lrn-nanoscience-lrn-nanotech</a> <ul> <li><a
+href="#sec-1-18-1">1.18.1. Nanodoc software</a></li> </ul> </li> <li><a
+href="#sec-1-19">1.19. lrn-neural-networks</a> <ul> <li><a
+href="#sec-1-19-1">1.19.1. </a></li> <li><a href="#sec-1-19-2">1.19.2.
+</a></li> </ul> </li> <li><a href="#sec-1-20">1.20. lrn-NS lrn-neuroscience</a>
+<ul> <li><a href="#sec-1-20-1">1.20.1. what is known about coding in neurons?
+prob have to get into specific region</a></li> <li><a
+href="#sec-1-20-2">1.20.2. maybe classify different ways of transfering
+information between them?</a></li> <li><a href="#sec-1-20-3">1.20.3. sawtooth
+beta?????? wtf is up with these waveforms</a></li> <li><a
+href="#sec-1-20-4">1.20.4. if learn stuff about thal, can maybe help with
+parkinson's?</a></li> <li><a href="#sec-1-20-5">1.20.5. rlnshp b/w D1 DA rec
+b/w epi &amp; park's</a></li> <li><a href="#sec-1-20-6">1.20.6. inactivation
+variables</a></li> <li><a href="#sec-1-20-7">1.20.7. lrn-fmri</a></li> <li><a
+href="#sec-1-20-8">1.20.8. lrn-iit</a></li> <li><a href="#sec-1-20-9">1.20.9.
+lrn-holonomic-brain-theory</a></li> <li><a href="#sec-1-20-10">1.20.10.
+lrn-neuro-anatomy (lrn-anatomy) lrn-neuroanatomy</a></li> <li><a
+href="#sec-1-20-11">1.20.11. lrn-neuro-methods</a></li> <li><a
+href="#sec-1-20-12">1.20.12. lrn-neuro-rhythms</a></li> <li><a
+href="#sec-1-20-13">1.20.13. lrn-nootropics</a></li> <li><a
+href="#sec-1-20-14">1.20.14. lrn-compu-ns</a></li> </ul> </li> <li><a
+href="#sec-1-21">1.21. lrn-philosophy</a> <ul> <li><a
+href="#sec-1-21-1">1.21.1. lrn-logic</a></li> </ul> </li> <li><a
+href="#sec-1-22">1.22. lrn-physics</a> <ul> <li><a href="#sec-1-22-1">1.22.1.
+accumulate ?</a></li> <li><a href="#sec-1-22-2">1.22.2. go back over krane's
+intro (nick james has krane)</a></li> <li><a href="#sec-1-22-3">1.22.3. study
+general relativity, like einstein's book?</a></li> <li><a
+href="#sec-1-22-4">1.22.4. Could warp across space-time by generating points of
+huge gravity, from either huge masses or masses from energy?</a></li> <li><a
+href="#sec-1-22-5">1.22.5. books (look at this e-library) </a></li> <li><a
+href="#sec-1-22-6">1.22.6. why momentum works </a></li> <li><a
+href="#sec-1-22-7">1.22.7. </a></li> <li><a href="#sec-1-22-8">1.22.8.
+</a></li> </ul> </li> <li><a href="#sec-1-23">1.23. lrn-politics</a> <ul>
+<li><a href="#sec-1-23-1">1.23.1. find news source for local political news,
+pay attn to local politics</a></li> <li><a href="#sec-1-23-2">1.23.2. go over
+thinktanks </a></li> <li><a href="#sec-1-23-3">1.23.3. use
+findthedata.org</a></li> <li><a href="#sec-1-23-4">1.23.4. also check out
+google's publicdata thing?</a></li> <li><a href="#sec-1-23-5">1.23.5. read less
+wrong, maybe take notes on essays? do the starter sequence</a></li> <li><a
+href="#sec-1-23-6">1.23.6. look anti nuclear stuff to see what they say point
+by point</a></li> <li><a href="#sec-1-23-7">1.23.7. add to um to listen?
+podcasts </a></li> <li><a href="#sec-1-23-8">1.23.8. open-politics, a la open
+political data </a></li> </ul> </li> <li><a href="#sec-1-24">1.24.
+lrn-productivity</a> <ul> <li><a href="#sec-1-24-1">1.24.1. wtf mdwiki allows
+wikis on github pages sites???</a></li> <li><a href="#sec-1-24-2">1.24.2.
+lrn-procrastination</a></li> </ul> </li> <li><a href="#sec-1-25">1.25.
+lrn-prof-dev-lrn-professional-development</a> <ul> <li><a
+href="#sec-1-25-1">1.25.1. 20130326 professional devlpmt talk</a></li> <li><a
+href="#sec-1-25-2">1.25.2. lrn-leadership</a></li> <li><a
+href="#sec-1-25-3">1.25.3. lrn-networking lrn-professional-networking /
+long-term-networking</a></li> <li><a href="#sec-1-25-4">1.25.4. lrn-presn,
+lrn-presentations</a></li> <li><a href="#sec-1-25-5">1.25.5.
+lrn-industry</a></li> </ul> </li> <li><a href="#sec-1-26">1.26. lrn-ripping</a>
+<ul> <li><a href="#sec-1-26-1">1.26.1. DVDs</a></li> <li><a
+href="#sec-1-26-2">1.26.2. CDs</a></li> </ul> </li> <li><a
+href="#sec-1-27">1.27. lrn-sailing&#xa0;&#xa0;&#xa0;<span class="tag"><span
+class="lrn_sailing">lrn_sailing</span></span></a> <ul> <li><a
+href="#sec-1-27-1">1.27.1. sailing notes, day 1 2014-09-20</a></li> <li><a
+href="#sec-1-27-2">1.27.2. sailing notes, day 2 2014-09-21</a></li> <li><a
+href="#sec-1-27-3">1.27.3. sailing notes, day 3 2014-09-27</a></li> <li><a
+href="#sec-1-27-4">1.27.4. sailing notes, day 4 2014-09-28</a></li> </ul> </li>
+<li><a href="#sec-1-28">1.28. lrn-science-curation</a> <ul> <li><a
+href="#sec-1-28-1">1.28.1. researchgate and </a></li> </ul> </li> <li><a
+href="#sec-1-29">1.29. lrn-science-policy</a> <ul> <li><a
+href="#sec-1-29-1">1.29.1. criticism of peer review</a></li> <li><a
+href="#sec-1-29-2">1.29.2. reproducibility crisis</a></li> </ul> </li> <li><a
+href="#sec-1-30">1.30. lrn-sociology</a></li> <li><a href="#sec-1-31">1.31.
+lrn-social-movements</a> <ul> <li><a href="#sec-1-31-1">1.31.1.
+lrn-activism</a></li> <li><a href="#sec-1-31-2">1.31.2. lrn-effective-altruism
+EA</a></li> <li><a href="#sec-1-31-3">1.31.3. lrn-feminism</a></li> <li><a
+href="#sec-1-31-4">1.31.4. lrn-labor-rights</a></li> <li><a
+href="#sec-1-31-5">1.31.5. lrn-lrning</a></li> <li><a
+href="#sec-1-31-6">1.31.6. lrn-quantified-self</a></li> <li><a
+href="#sec-1-31-7">1.31.7. lrn-transhumanism</a></li> </ul> </li> <li><a
+href="#sec-1-32">1.32. lrn-studying lrn-reading</a> <ul> <li><a
+href="#sec-1-32-1">1.32.1. PQRST system - Preview, Question, Read, Summary,
+Test</a></li> <li><a href="#sec-1-32-2">1.32.2. Studying for Science, in
+calibre</a></li> <li><a href="#sec-1-32-3">1.32.3. </a></li> <li><a
+href="#sec-1-32-4">1.32.4. how to read a book</a></li> <li><a
+href="#sec-1-32-5">1.32.5. lrn-trackers</a></li> </ul> </li> <li><a
+href="#sec-1-33">1.33. lrn-symbolic-logic</a> <ul> <li><a
+href="#sec-1-33-1">1.33.1. learn symbolic regression</a></li> <li><a
+href="#sec-1-33-2">1.33.2. jason's idea to optimize models based on fundamental
+laws of physical systems derived from symbolic logic,</a></li> </ul> </li>
+<li><a href="#sec-1-34">1.34. lrn-teaching</a> <ul> <li><a
+href="#sec-1-34-1">1.34.1. avery's first-year grad school teacher starts class
+with an open ended question, and connects people's answers in a web through
+discussion, and then saves and posts to the web</a></li> </ul> </li> <li><a
+href="#sec-1-35">1.35. lrn-traveling</a> <ul> <li><a href="#sec-1-35-1">1.35.1.
+eventually should learn air deals via </a></li> <li><a
+href="#sec-1-35-2">1.35.2. can track trends via </a></li> </ul> </li> <li><a
+href="#sec-1-36">1.36. lrn-writing</a> <ul> <li><a href="#sec-1-36-1">1.36.1.
+</a></li> <li><a href="#sec-1-36-2">1.36.2. brian nosek says In writing, lead
+with the evidence, follow with the explanation.</a></li> <li><a
+href="#sec-1-36-3">1.36.3. writing essay to eric denovellis after briefly
+reading chapters of his thesis:</a></li> <li><a href="#sec-1-36-4">1.36.4. A
+manual for writers Kate l turabian</a></li> <li><a href="#sec-1-36-5">1.36.5.
+lrn-writing-systems/software! currently using pandoc</a></li> <li><a
+href="#sec-1-36-6">1.36.6. lrn-sci-writing</a></li> </ul> </li> </ul> </li>
+</ul> </div> </div> <div id="outline-container-sec-1" class="outline-2"> <h2
+id="sec-1"><span class="section-number-2">1</span> lrn&#xa0;&#xa0;&#xa0;<span
+class="tag"><span class="lrn">lrn</span></span></h2> <div
+class="outline-text-2" id="text-1"> </div><div id="outline-container-sec-1-1"
+class="outline-3"> <h3 id="sec-1-1"><span class="section-number-3">1.1</span>
+lrn-bioinformatics</h3> <div class="outline-text-3" id="text-1-1"> </div><div
+id="outline-container-sec-1-1-1" class="outline-4"> <h4 id="sec-1-1-1"><span
+class="section-number-4">1.1.1</span> <a
+href="http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics/">http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics/</a></h4>
+</div> <div id="outline-container-sec-1-1-2" class="outline-4"> <h4
+id="sec-1-1-2"><span class="section-number-4">1.1.2</span> learn by doing <a
+href="http://rosalind.info/problems/list-view/">http://rosalind.info/problems/list-view/</a></h4>
+</div> </div> <div id="outline-container-sec-1-2" class="outline-3"> <h3
+id="sec-1-2"><span class="section-number-3">1.2</span> lrn-business</h3> <div
+class="outline-text-3" id="text-1-2"> </div><div
+id="outline-container-sec-1-2-1" class="outline-4"> <h4 id="sec-1-2-1"><span
+class="section-number-4">1.2.1</span> IP intellectual property</h4> <div
+class="outline-text-4" id="text-1-2-1"> </div><ol class="org-ol"><li><a
+id="sec-1-2-1-1" name="sec-1-2-1-1"></a><a
+href="http://adlervermillion.com/how-to-read-a-patent/">http://adlervermillion.com/how-to-read-a-patent/</a><br
+/></li></ol> </div> <div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> from Icon mag:
+in europe, of 10k food products launched every year, 50% fail within 3 months,
+95% fail within 2 years</h4> </div> <div id="outline-container-sec-1-2-3"
+class="outline-4"> <h4 id="sec-1-2-3"><span
+class="section-number-4">1.2.3</span> lrn-accounting</h4> <div
+class="outline-text-4" id="text-1-2-3"> </div><ol class="org-ol"><li><a
+id="sec-1-2-3-1" name="sec-1-2-3-1"></a>book Accounting for Programmers<br
+/></li> <li><a id="sec-1-2-3-2" name="sec-1-2-3-2"></a><a
+href="http://www.learnaccountingforfree.com/">http://www.learnaccountingforfree.com/</a><br
+/></li> <li><a id="sec-1-2-3-3" name="sec-1-2-3-3"></a><a
+href="http://www.dwmbeancounter.com/tutorial/Tutorial.html">http://www.dwmbeancounter.com/tutorial/Tutorial.html</a>
+<a
+href="http://hn.premii.com/#/comments/11239437">http://hn.premii.com/#/comments/11239437</a><br
+/></li></ol> </div> </div> <div id="outline-container-sec-1-3"
+class="outline-3"> <h3 id="sec-1-3"><span class="section-number-3">1.3</span>
+lrn-clothing&#xa0;&#xa0;&#xa0;<span class="tag"><span
+class="lrn_clothing">lrn_clothing</span></span></h3> <div
+class="outline-text-3" id="text-1-3"> </div><div
+id="outline-container-sec-1-3-1" class="outline-4"> <h4 id="sec-1-3-1"><span
+class="section-number-4">1.3.1</span> shoes</h4> <div class="outline-text-4"
+id="text-1-3-1"> </div><ol class="org-ol"><li><a id="sec-1-3-1-1"
+name="sec-1-3-1-1"></a>Hubero's shoe oil / grease<br  /></li> <li><a
+id="sec-1-3-1-2" name="sec-1-3-1-2"></a>waterproofing canvas converse,
+apparently use fluoropolymer only, not silicon <a
+href="http://www.ehow.com/how_8383551_waterproof-converse.html">http://www.ehow.com/how_8383551_waterproof-converse.html</a><br
+/></li> <li><a id="sec-1-3-1-3" name="sec-1-3-1-3"></a>ethical shoes<br  /><ol
+class="org-ol"><li><a id="sec-1-3-1-3-1" name="sec-1-3-1-3-1"></a><a
+href="https://www.zshoesorganic.com/collections/mens/products/mens-blackout-edition-1?variant=42581730120">https://www.zshoesorganic.com/collections/mens/products/mens-blackout-edition-1?variant=42581730120</a><br
+/></li> <li><a id="sec-1-3-1-3-2" name="sec-1-3-1-3-2"></a><a
+href="https://www.etnies.com/us/mens/shoes/jameson-ht-4101000468.html?dwvar_4101000468_color=979#start=6">https://www.etnies.com/us/mens/shoes/jameson-ht-4101000468.html?dwvar_4101000468_color=979#start=6</a><br
+/></li> <li><a id="sec-1-3-1-3-3" name="sec-1-3-1-3-3"></a>vegan ? unclear <a
+href="https://keepcompany.com/products/the-homer-black-non-slip">https://keepcompany.com/products/the-homer-black-non-slip</a><br
+/><ol class="org-ol"><li><a id="sec-1-3-1-3-3-1"
+name="sec-1-3-1-3-3-1"></a>even if not everything they sell is vegan, they do a
+LOT of things with musicians to donate to social causes like PP, ACLU, etc.<br
+/></li></ol> </li> <li><a id="sec-1-3-1-3-4" name="sec-1-3-1-3-4"></a><a
+href="https://shop.ethletic.com/en/trainer/">https://shop.ethletic.com/en/trainer/</a><br
+/></li> <li><a id="sec-1-3-1-3-5" name="sec-1-3-1-3-5"></a>the people's
+movement<br  /></li> <li><a id="sec-1-3-1-3-6" name="sec-1-3-1-3-6"></a>veja<br
+/></li> <li><a id="sec-1-3-1-3-7" name="sec-1-3-1-3-7"></a>indosole<br  /></li>
+<li><a id="sec-1-3-1-3-8" name="sec-1-3-1-3-8"></a>fancy dress "vegan leather"
+shoes <a
+href="https://www.noah-shop.com/en/vegan-mens-shoes/">https://www.noah-shop.com/en/vegan-mens-shoes/</a><br
+/></li> <li><a id="sec-1-3-1-3-9" name="sec-1-3-1-3-9"></a>exercise <a
+href="https://www.etnies.com/us/mens/shoes/scout-4101000419.html?dwvar_4101000419_color=008#start=37">https://www.etnies.com/us/mens/shoes/scout-4101000419.html?dwvar_4101000419_color=008#start=37</a><br
+/></li> <li><a id="sec-1-3-1-3-10" name="sec-1-3-1-3-10"></a>brooks shoe
+company makes most shoes vegan? spec in running shoes <a
+href="http://www.brooksrunning.com/en_us">http://www.brooksrunning.com/en_us</a><br
+/></li></ol> </li></ol> </div> </div> <div id="outline-container-sec-1-4"
+class="outline-3"> <h3 id="sec-1-4"><span class="section-number-3">1.4</span>
+lrn-compsci</h3> <div class="outline-text-3" id="text-1-4"> </div><div
+id="outline-container-sec-1-4-1" class="outline-4"> <h4 id="sec-1-4-1"><span
+class="section-number-4">1.4.1</span> <a
+href="https://www.reddit.com/r/programming/comments/6dd7lg/every_5_minutes_you_spend_writing_code_in_a_new/">https://www.reddit.com/r/programming/comments/6dd7lg/every_5_minutes_you_spend_writing_code_in_a_new/</a></h4>
+</div> <div id="outline-container-sec-1-4-2" class="outline-4"> <h4
+id="sec-1-4-2"><span class="section-number-4">1.4.2</span> <a
+href="https://github.com/Leo-G/DevopsWiki">https://github.com/Leo-G/DevopsWiki</a></h4>
+</div> <div id="outline-container-sec-1-4-3" class="outline-4"> <h4
+id="sec-1-4-3"><span class="section-number-4">1.4.3</span> <a
+href="https://teachyourselfcs.com/">https://teachyourselfcs.com/</a></h4>
+</div> <div id="outline-container-sec-1-4-4" class="outline-4"> <h4
+id="sec-1-4-4"><span class="section-number-4">1.4.4</span> <a
+href="http://composingprograms.com/">http://composingprograms.com/</a></h4>
+</div> <div id="outline-container-sec-1-4-5" class="outline-4"> <h4
+id="sec-1-4-5"><span class="section-number-4">1.4.5</span> apparently loading
+data from a binary instead of a plaintext is 5-20x faster?</h4> </div> <div
+id="outline-container-sec-1-4-6" class="outline-4"> <h4 id="sec-1-4-6"><span
+class="section-number-4">1.4.6</span> The Big List of Naughty Strings (strings
+likely to cause issues as input) | Hacker News <a
+href="https://news.ycombinator.com/item?id=13406119">https://news.ycombinator.com/item?id=13406119</a></h4>
+</div> <div id="outline-container-sec-1-4-7" class="outline-4"> <h4
+id="sec-1-4-7"><span class="section-number-4">1.4.7</span> diagramming
+software: lucid charts chrome app</h4> </div> <div
+id="outline-container-sec-1-4-8" class="outline-4"> <h4 id="sec-1-4-8"><span
+class="section-number-4">1.4.8</span> lrn-apis</h4> <div class="outline-text-4"
+id="text-1-4-8"> </div><ol class="org-ol"><li><a id="sec-1-4-8-1"
+name="sec-1-4-8-1"></a><a
+href="https://news.ycombinator.com/item?id=8636758">https://news.ycombinator.com/item?id=8636758</a><br
+/></li> <li><a id="sec-1-4-8-2" name="sec-1-4-8-2"></a>cheatsheets for
+everything <a href="http://overapi.com/">http://overapi.com/</a><br
+/></li></ol> </div> <div id="outline-container-sec-1-4-9" class="outline-4">
+<h4 id="sec-1-4-9"><span class="section-number-4">1.4.9</span>
+lrn-algorithms-lrn-data-structures</h4> <div class="outline-text-4"
+id="text-1-4-9"> </div><ol class="org-ol"><li><a id="sec-1-4-9-1"
+name="sec-1-4-9-1"></a>visualizing algos: <a
+href="https://news.ycombinator.com/item?id=7949995">https://news.ycombinator.com/item?id=7949995</a><br
+/></li> <li><a id="sec-1-4-9-2" name="sec-1-4-9-2"></a>data compression
+explained <a
+href="http://mattmahoney.net/dc/dce.html">http://mattmahoney.net/dc/dce.html</a><br
+/></li> <li><a id="sec-1-4-9-3" name="sec-1-4-9-3"></a>big data<br  /><ol
+class="org-ol"><li><a id="sec-1-4-9-3-1" name="sec-1-4-9-3-1"></a><a
+href="https://ldtopology.wordpress.com/category/data-topology/">https://ldtopology.wordpress.com/category/data-topology/</a><br
+/></li></ol> </li> <li><a id="sec-1-4-9-4" name="sec-1-4-9-4"></a>dictionary of
+algos and data structures <a
+href="http://xlinux.nist.gov/dads/">http://xlinux.nist.gov/dads/</a><br /></li>
+<li><a id="sec-1-4-9-5" name="sec-1-4-9-5"></a>algos used in the linux kernel
+<a
+href="http://cstheory.stackexchange.com/a/19773">http://cstheory.stackexchange.com/a/19773</a><br
+/></li></ol> </div> <div id="outline-container-sec-1-4-10" class="outline-4">
+<h4 id="sec-1-4-10"><span class="section-number-4">1.4.10</span>
+lrn-coding-style</h4> <div class="outline-text-4" id="text-1-4-10"> </div><ol
+class="org-ol"><li><a id="sec-1-4-10-1" name="sec-1-4-10-1"></a>uni west FL
+style guide <a
+href="http://www.cs.uwf.edu/~wilde/gump/codestan.htm">http://www.cs.uwf.edu/~wilde/gump/codestan.htm</a><br
+/></li></ol> </div> <div id="outline-container-sec-1-4-11" class="outline-4">
+<h4 id="sec-1-4-11"><span class="section-number-4">1.4.11</span>
+lrn-compilers</h4> <div class="outline-text-4" id="text-1-4-11"> </div><ol
+class="org-ol"><li><a id="sec-1-4-11-1" name="sec-1-4-11-1"></a>Compiler takes
+the source files and outputs object files, Linker takes the object files and
+creates an executable<br  /></li> <li><a id="sec-1-4-11-2"
+name="sec-1-4-11-2"></a>installing GCC from scratch <a
+href="http://stackoverflow.com/a/9450422">http://stackoverflow.com/a/9450422</a>,
+though the next answer <a
+href="http://stackoverflow.com/a/10662297">http://stackoverflow.com/a/10662297</a>
+claims a much easier solution that IIRC worked on my centos office machine<br
+/><div class="outline-text-5" id="text-1-4-11-2"> <p> ``` tar xzf
+gcc-4.6.2.tar.gz cd gcc-4.6.2 ./contrib/download<sub>prerequisites</sub> cd ..
+mkdir objdir cd objdir $PWD/../gcc-4.6.2/configure
+&#x2013;prefix=/opt/gcc-4.6.2 make make install ``` </p> </div> </li>
 
 <li><a id="sec-1-4-11-3" name="sec-1-4-11-3"></a>optimization <a href="http://www.agner.org/optimize/blog/">http://www.agner.org/optimize/blog/</a><br  /></li>
 <li><a id="sec-1-4-11-4" name="sec-1-4-11-4"></a>read the dragon book?<br  /></li>
@@ -5495,7 +5238,6 @@ I'm sending you both my and Nancy's abstracts so you can see the differences/sup
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: wintermute</p>
 <p class="date">Created: 2018-03-23 Fri 17:49</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
